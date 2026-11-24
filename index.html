@@ -141,10 +141,9 @@
       position: relative; overflow: hidden; min-height: 640px; padding: 58px;
       border-radius: 36px; background: var(--night); color: white; isolation: isolate;
     }
-    .hero-card::before {
-      position: absolute; z-index: -2; inset: 0; content: "";
-      background: url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2200&q=88") center 52% / cover no-repeat;
-      opacity: .8;
+    .hero-video {
+      position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 52%;
     }
     .hero-card::after {
       position: absolute; z-index: -1; inset: 0; content: "";
@@ -307,7 +306,7 @@
       .menu-toggle { display: grid; }
       .hero { padding-top: 9px; }
       .hero-card { display: flex; min-height: 660px; flex-direction: column; justify-content: start; padding: 38px 26px 26px; border-radius: 29px; }
-      .hero-card::before { background-position: 58% center; }
+      .hero-video { object-position: 58% center; }
       .hero-card::after { background: linear-gradient(90deg, rgba(10,14,12,.91), rgba(10,14,12,.55)), linear-gradient(0deg, rgba(10,14,12,.7), transparent 60%); }
       .hero h1 { margin: 20px 0 17px; font-size: clamp(49px, 12vw, 68px); }
       .hero-description { max-width: 380px; font-size: 15px; }
@@ -395,6 +394,9 @@
     <section class="hero">
       <div class="wrap">
         <div class="hero-card">
+          <video class="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+            <source src="recar77video.mp4" type="video/mp4">
+          </video>
           <div class="hero-content">
             <span class="eyebrow">Автосервис в Москве</span>
             <h1>Ваш автомобиль<br>в <span>надёжных</span><br>руках.</h1>
@@ -512,7 +514,7 @@
       <div class="wrap">
         <div class="story-card">
           <div class="story-image">
-            <img src="https://avatars.mds.yandex.net/get-altay/16368192/2a00000198376bce7f0e827fb430df620073/XXXL" alt="Автомобиль в сервисной мастерской" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1200&q=85" alt="Автомобиль в сервисной мастерской" loading="lazy">
             <span class="image-label">RE.CAR77 · Москва</span>
           </div>
           <div class="story-content">
